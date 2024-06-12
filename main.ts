@@ -1,8 +1,8 @@
 input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P1, 80)
+    pins.servoWritePin(AnalogPin.P1, 70)
 })
 input.onButtonPressed(Button.B, function () {
-    pins.servoWritePin(AnalogPin.P1, 100)
+    pins.servoWritePin(AnalogPin.P1, 110)
 })
 input.onSound(DetectedSound.Loud, function () {
     if (mv == 0) {
