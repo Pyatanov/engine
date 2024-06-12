@@ -1,3 +1,9 @@
+input.onButtonPressed(Button.A, function () {
+    pins.servoWritePin(AnalogPin.P1, 80)
+})
+input.onButtonPressed(Button.B, function () {
+    pins.servoWritePin(AnalogPin.P1, 100)
+})
 input.onSound(DetectedSound.Loud, function () {
     if (mv == 0) {
         mv = 1
@@ -21,8 +27,12 @@ input.onSound(DetectedSound.Loud, function () {
         pins.analogWritePin(AnalogPin.P0, 0)
     }
 })
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    pins.servoWritePin(AnalogPin.P1, 90)
+})
 let mv = 0
 input.setSoundThreshold(SoundThreshold.Loud, 101)
+pins.servoWritePin(AnalogPin.P1, 90)
 basic.forever(function () {
 	
 })
